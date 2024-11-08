@@ -1,0 +1,74 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Formulario de Encuesta</title>
+  <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+  <div class="container">
+    <h1 id="title">Formulario de Encuesta</h1>
+    <p id="description">Por favor, complete este formulario. ¡Su opinión es importante para nosotros!</p>
+
+    <form id="survey-form">
+      <!-- Campo de nombre -->
+      <div class="form-group">
+        <label for="name">Nombre:</label>
+        <input id="name" type="text" name="name" required placeholder="Ingrese su nombre completo" />
+      </div>
+
+      <!-- Campo de correo electrónico -->
+      <div class="form-group">
+        <label for="email">Correo electrónico:</label>
+        <input id="email" type="email" name="email" required placeholder="Ingrese su correo electrónico" />
+      </div>
+
+      <!-- Campo de edad -->
+      <div class="form-group">
+        <label for="number">Edad (Opcional):</label>
+        <input id="number" type="number" name="age" min="18" max="100" placeholder="Ingrese su edad" />
+      </div>
+
+      <!-- Desplegable -->
+      <div class="form-group">
+        <label for="dropdown">Elija su nivel de experiencia:</label>
+        <select id="dropdown" name="experience" required>
+          <option value="beginner">Principiante</option>
+          <option value="intermediate">Intermedio</option>
+          <option value="expert">Experto</option>
+        </select>
+      </div>
+
+      <!-- Botones de opción -->
+      <div class="form-group">
+        <label>¿Prefiere aprender de forma:</label>
+        <input type="radio" id="radio1" name="learning" value="visual" required />
+        <label for="radio1">Visual</label>
+        <input type="radio" id="radio2" name="learning" value="auditory" required />
+        <label for="radio2">Auditiva</label>
+      </div>
+
+      <!-- Casillas de verificación -->
+      <div class="form-group">
+        <label>¿Qué lenguajes de programación conoce? (Seleccione todos los que apliquen):</label>
+        <input type="checkbox" name="languages" value="javascript" /> JavaScript
+        <input type="checkbox" name="languages" value="python" /> Python
+        <input type="checkbox" name="languages" value="html" /> HTML
+        <input type="checkbox" name="languages" value="css" /> CSS
+      </div>
+
+      <!-- Área de texto -->
+      <div class="form-group">
+        <label for="comments">Comentarios adicionales:</label>
+        <textarea id="comments" name="comments" placeholder="Ingrese sus comentarios aquí" rows="4"></textarea>
+      </div>
+
+      <!-- Botón de envío -->
+      <div class="form-group">
+        <input id="submit" type="submit" value="Enviar" />
+      </div>
+    </form>
+  </div>
+</body>
+</html>
